@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<title>Lumen Reach</title>
+<meta name="description" content="A cozy near-future life sim with real-world conditions, a UBI economy, grounded nanotech and an orbital station.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loading">Waking the town…</div>
+<div id="stage"></div>
+<div id="tags"></div>
+<div id="hud" hidden>
+  <div id="clock" class="glass">
+    <div class="time mono" id="hTime">07:00</div>
+    <div class="date" id="hDate">Mon 13 Oct 2147 · Day 1</div>
+    <div id="speeds">
+      <button data-sp="0" title="Pause (Space)">❚❚</button>
+      <button data-sp="1" class="on" title="Relaxed: 1 game minute every 2 seconds (1)">1×</button>
+      <button data-sp="3" title="3× (2)">3×</button>
+      <button data-sp="10" title="10× (3)">10×</button>
+    </div>
+  </div>
+  <div id="status" class="glass">
+    <div class="cr" id="hCr">₵ 300</div>
+    <div class="loc" id="hLoc">Home</div>
+    <div class="sub" id="hSub"></div>
+    <div class="sub" id="hSave" style="opacity:.45;transition:opacity .6s"></div>
+  </div>
+  <div id="needs" class="glass"></div>
+  <div id="keys" class="glass">
+    <kbd>WASD</kbd> move · <kbd>Shift</kbd> run · <kbd>Z</kbd><kbd>C</kbd> turn<br>
+    <kbd>E</kbd> interact / talk · <kbd>Esc</kbd> stop<br>
+    <kbd>I</kbd> things · <kbd>J</kbd> journal · <kbd>N</kbd> weave<br>
+    <kbd>B</kbd> breathe · <kbd>H</kbd> earbuds · <kbd>L</kbd> lights<br>
+    <kbd>M</kbd> mute · <kbd>R</kbd> toggle run · <kbd>Tab</kbd> body check<br><kbd>/</kbd> hide keys
+  </div>
+  <div id="toasts"></div>
+  <div id="prompt" class="glass" hidden></div>
+  <div id="activity" class="glass" hidden>
+    <div class="row"><span id="aName">Doing</span><span class="mono" id="aLeft">0m</span></div>
+    <div class="track"><i id="aBar"></i></div>
+    <div class="esc"><kbd>Esc</kbd> to stop early</div>
+  </div>
+  <div id="thought"></div>
+  <div id="hand" class="glass" hidden></div>
+</div>
+<div id="menu" class="glass" hidden></div>
+<div id="drawer" class="drawer" hidden></div>
+<div id="joy" hidden><i></i></div>
+<button id="touchE" class="tbtn" aria-label="Interact or talk">Use</button>
+<button id="touchRun" class="tbtn" aria-label="Toggle running">Run</button>
+<button id="touchMenu" class="tbtn" aria-label="Open menu">☰</button>
+<div id="quick" class="glass" hidden>
+  <button data-q="things">Your things</button><button data-q="journal">Journal & settings</button><button data-q="weave">Weave (nanites)</button>
+  <button data-q="breathe">Breathe</button><button data-q="earbuds">Earbuds in/out</button><button data-q="lights">Lights on/off</button><button data-q="body">Check in with your body</button>
+</div>
+<div id="creator" hidden></div>
+
+<script src="js/vendor/three.bundle.min.js"></script>
+<script src="js/people.js"></script>
+<script src="js/core.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/extras.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/world.js"></script>
+<script src="js/actions.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
